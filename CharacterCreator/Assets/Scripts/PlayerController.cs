@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public GameObject StartScreen;
     public GameObject ArmorShop;
     public GameObject WeaponShop;
+    public GameObject Magicshop;
     public SpriteRenderer ArmorRenderer; 
     public SpriteRenderer WeaponRenderer;
     
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
         this.StartScreen.SetActive(true);
  this.WeaponShop.SetActive(false);
  this.ArmorShop.SetActive(false);
+  this.Magicshop.SetActive(false);
     }
     public void SetArmor(Sprite newSprite)
     {
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour
  this.ArmorShop.SetActive(true);
  this.WeaponShop.SetActive(false);
    this.StartScreen.SetActive(false);
+    this.Magicshop.SetActive(false);
 
 
     }
@@ -37,7 +40,14 @@ public class PlayerController : MonoBehaviour
  this.ArmorShop.SetActive(false);
   this.WeaponShop.SetActive(true);
   this.StartScreen.SetActive(false);
+   this.Magicshop.SetActive(false);
     }
+    public void MagicShop1(){
+     this.ArmorShop.SetActive(false);
+  this.WeaponShop.SetActive(false);
+  this.StartScreen.SetActive(false);
+  this.Magicshop.SetActive(true);
+  }
     void Update()
     {
         
