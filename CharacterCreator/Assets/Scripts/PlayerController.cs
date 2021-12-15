@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour
     public GameObject Magicshop;
     public SpriteRenderer ArmorRenderer; 
     public SpriteRenderer WeaponRenderer;
+    public ParticleSystem Ice;
+    public ParticleSystem Fire;
+    public ParticleSystem Poison;
+
+    
     
     // Start is called before the first frame update
     public void Start()
@@ -47,6 +52,22 @@ public class PlayerController : MonoBehaviour
   this.WeaponShop.SetActive(false);
   this.StartScreen.SetActive(false);
   this.Magicshop.SetActive(true);
+  }
+  public void Icebutton(){
+      this.Ice.gameObject.SetActive(true);
+      this.Fire.gameObject.SetActive(false);
+      this.Poison.gameObject.SetActive(false);
+      
+  }
+  public void Firebutton(){
+      this.Ice.gameObject.SetActive(false);
+      this.Fire.gameObject.SetActive(true);
+      this.Poison.gameObject.SetActive(false);
+  }
+  public void Poisonbutton(){
+      this.Ice.gameObject.SetActive(false);
+      this.Fire.gameObject.SetActive(false);
+      this.Poison.gameObject.SetActive(true);
   }
     void Update()
     {
